@@ -2,7 +2,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from pydantic import BaseModel, Field
 from langchain_google_genai import ChatGoogleGenerativeAI
 
-llm = ChatGoogleGenerativeAI(temperature=0)
+llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash-001")
 
 
 class GradeDocuments(BaseModel):
