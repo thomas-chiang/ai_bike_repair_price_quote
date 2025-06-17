@@ -14,15 +14,12 @@ tiktoken = "*"
 langchainhub = "*"
 langchain = "*"
 langgraph = "*"
-tavily-python = "*"
 langchain-openai = "*"
 python-dotenv = "*"
 black = "*"
 isort = "*"
-pytest = "*"
 langchain-chroma = "*"
-langchain-google-genai = "2.1.5"
-firecrawl-py = "1.9.0"
+langchain-google-genai = "*"
 
 [build-system]
 requires = ["poetry-core"]
