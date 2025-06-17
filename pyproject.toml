@@ -18,8 +18,10 @@ langchain-openai = "*"
 python-dotenv = "*"
 black = "*"
 isort = "*"
-langchain-chroma = "*"
 langchain-google-genai = "*"
+pinecone = "*"
+langchain-pinecone = "^0.2.8"
+
 
 [build-system]
 requires = ["poetry-core"]
