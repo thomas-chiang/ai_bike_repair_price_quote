@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "superbench-langgraph"
+name = "superbench"
 version = "0.1.0"
 description = ""
 authors = ["Thomas Chiang <t7hiang@gmail.com>"]
@@ -21,6 +21,11 @@ isort = "*"
 langchain-google-genai = "*"
 pinecone = "*"
 langchain-pinecone = "^0.2.8"
+fastapi = {extras = ["standard"], version = "^0.115.13"}
+firebase-admin = "^6.9.0"
+google-auth-oauthlib = "^1.2.2"
+google-api-python-client = "^2.172.0"
+requests = "^2.32.4"
 
 
 [build-system]
