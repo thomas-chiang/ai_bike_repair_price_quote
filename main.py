@@ -11,6 +11,7 @@ from pydantic import BaseModel
 from datetime import datetime, timezone
 from dotenv import load_dotenv
 from typing import List
+from fastapi.middleware.cors import CORSMiddleware
 
 # --- Configuration & Initialization ---
 
@@ -20,9 +21,19 @@ load_dotenv()
 
 # Initialize FastAPI app
 app = FastAPI(
-    title="Echo Chat Backend",
+    title="Price Quoter Chat Backend",
     description="A FastAPI backend for a chat application using Firebase for auth and data storage.",
     version="1.0.0",
+)
+
+# --- CORS Middleware ---
+# This must be added before any routes are defined.
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Add your frontend origin here
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
 )
 
 # Initialize Firebase Admin SDK
@@ -99,9 +110,9 @@ async def get_current_user_uid(creds: HTTPAuthorizationCredentials = Depends(aut
 @app.get("/", summary="Root endpoint for health check")
 async def read_root():
     """A simple health check endpoint."""
-    return {"status": "ok", "message": "Welcome to the Echo Chat Backend!"}
+    return {"status": "ok", "message": "Welcome to the Price Quoter Chat Backend!"}
 
-@app.post("/chat", response_model=ChatResponse, summary="Send a message and get an echo response")
+@app.post("/chat", response_model=ChatResponse, summary="Send a message and get an Price Quoter response")
 async def create_chat(
     message: ChatMessageInput, 
     uid: str = Depends(get_current_user_uid)
@@ -118,10 +129,10 @@ async def create_chat(
     )
 
     result = (langgraph_app.invoke(input={"question": message.content}))
-    # 2. Create the machine's echo response
+    # 2. Create the machine's Price Quoter response
     machine_response = ChatMessage(
         role="machine",
-        content=result.get("generation"),  # Echoing the user's content
+        content=result.get("generation"),  # Price Quotering the user's content
         timestamp=datetime.now(timezone.utc)
     )
 

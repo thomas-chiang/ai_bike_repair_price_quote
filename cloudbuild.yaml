@@ -1,0 +1,20 @@
+steps:
+  # Docker Build
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 
+           'asia-east1-docker.pkg.dev/${PROJECT_ID}/superbench/superbench', '.']
+
+  # Docker push to Google Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push',  'asia-east1-docker.pkg.dev/${PROJECT_ID}/superbench/superbench']
+
+  # # Deploy to Cloud Run
+  # - name: google/cloud-sdk
+  #   args: ['gcloud', 'run', 'deploy', 'superbench', 
+  #          '--image=asia-east1-docker.pkg.dev/${PROJECT_ID}/superbench/superbench', 
+  #          '--region', 'us-central1', '--platform', 'managed', 
+  #          '--allow-unauthenticated']
+
+# Store images in Google Artifact Registry 
+images:
+  -asia-east1-docker.pkg.dev/${PROJECT_ID}/superbench/superbench
