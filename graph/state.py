@@ -1,4 +1,4 @@
-from typing import List, TypedDict
+from typing import Dict, List, TypedDict, Any
 
 
 class GraphState(TypedDict):
@@ -13,6 +13,7 @@ class GraphState(TypedDict):
     """
 
     question: str
+    chat_history: List[Dict[str, Any]]
     generation: str
     documents: List[str]
     can_answer_question: bool

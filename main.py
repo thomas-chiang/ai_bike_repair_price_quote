@@ -117,6 +117,23 @@ async def create_chat(
     message: ChatMessageInput, 
     uid: str = Depends(get_current_user_uid)
 ):
+    # Get reference to the user's chat document
+    chat_ref = db.collection("chats").document(uid)
+    
+    # Fetch the document from Firestore
+    doc = chat_ref.get()
+
+    chat_history = []
+    if doc.exists:
+        # If the document exists, return the 'messages' array.
+        chat_data = doc.to_dict()
+        pre_messages = chat_data.get("messages", [])
+        # Firestore returns dictionaries; we sort them by timestamp to ensure order.
+        pre_messages.sort(key=lambda x: x['timestamp'])
+        for pre_message in pre_messages:
+            role = "ai" if pre_message['role'] == 'machine' else "user"
+            chat_history.append((role, pre_message['content']))
+
     """
     Receives a message from an authenticated user, saves it to Firestore,
     generates an response from langgraph, saves it, and returns both messages.
@@ -128,7 +145,7 @@ async def create_chat(
         timestamp=datetime.now(timezone.utc)
     )
 
-    result = (langgraph_app.invoke(input={"question": message.content}))
+    result = (langgraph_app.invoke(input={"question": message.content, "chat_history":chat_history}))
     # 2. Create the machine's Price Quoter response
     machine_response = ChatMessage(
         role="machine",

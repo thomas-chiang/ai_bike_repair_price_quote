@@ -892,14 +892,14 @@ grpcio-gcp = ["grpcio-gcp (>=0.2.2,<1.0.0)"]
 
 [[package]]
 name = "google-api-python-client"
-version = "2.172.0"
+version = "2.173.0"
 description = "Google API Client Library for Python"
 optional = false
 python-versions = ">=3.7"
 groups = ["main"]
 files = [
-    {file = "google_api_python_client-2.172.0-py3-none-any.whl", hash = "sha256:9f1b9a268d5dc1228207d246c673d3a09ee211b41a11521d38d9212aeaa43af7"},
-    {file = "google_api_python_client-2.172.0.tar.gz", hash = "sha256:dcb3b7e067154b2aa41f1776cf86584a5739c0ac74e6ff46fc665790dca0e6a6"},
+    {file = "google_api_python_client-2.173.0-py3-none-any.whl", hash = "sha256:16a8e81c772dd116f5c4ee47d83643149e1367dc8fb4f47cb471fbcb5c7d7ac7"},
+    {file = "google_api_python_client-2.173.0.tar.gz", hash = "sha256:b537bc689758f4be3e6f40d59a6c0cd305abafdea91af4bc66ec31d40c08c804"},
 ]
 
 [package.dependencies]
@@ -993,27 +993,27 @@ protobuf = ">=3.20.2,<4.21.0 || >4.21.0,<4.21.1 || >4.21.1,<4.21.2 || >4.21.2,<4
 
 [[package]]
 name = "google-cloud-storage"
-version = "3.1.0"
+version = "3.1.1"
 description = "Google Cloud Storage API client library"
 optional = false
 python-versions = ">=3.7"
 groups = ["main"]
 files = [
-    {file = "google_cloud_storage-3.1.0-py2.py3-none-any.whl", hash = "sha256:eaf36966b68660a9633f03b067e4a10ce09f1377cae3ff9f2c699f69a81c66c6"},
-    {file = "google_cloud_storage-3.1.0.tar.gz", hash = "sha256:944273179897c7c8a07ee15f2e6466a02da0c7c4b9ecceac2a26017cb2972049"},
+    {file = "google_cloud_storage-3.1.1-py3-none-any.whl", hash = "sha256:ba7e6ae2be5a7a08742f001e23ec6a0c17d78c620f63bf8e0e7c2cbdddb407de"},
+    {file = "google_cloud_storage-3.1.1.tar.gz", hash = "sha256:f9c8f965cafd1d38509f8e2b070339e0e9e5bf050774653bf36213d4ea6104c0"},
 ]
 
 [package.dependencies]
-google-api-core = ">=2.15.0,<3.0.0dev"
-google-auth = ">=2.26.1,<3.0dev"
-google-cloud-core = ">=2.4.2,<3.0dev"
-google-crc32c = ">=1.0,<2.0dev"
-google-resumable-media = ">=2.7.2"
-requests = ">=2.18.0,<3.0.0dev"
+google-api-core = ">=2.15.0,<3.0.0"
+google-auth = ">=2.26.1,<3.0.0"
+google-cloud-core = ">=2.4.2,<3.0.0"
+google-crc32c = ">=1.1.3,<2.0.0"
+google-resumable-media = ">=2.7.2,<3.0.0"
+requests = ">=2.22.0,<3.0.0"
 
 [package.extras]
-protobuf = ["protobuf (<6.0.0dev)"]
-tracing = ["opentelemetry-api (>=1.1.0)"]
+protobuf = ["protobuf (>=3.20.2,<7.0.0)"]
+tracing = ["opentelemetry-api (>=1.1.0,<2.0.0)"]
 
 [[package]]
 name = "google-crc32c"
@@ -1714,19 +1714,19 @@ pydantic = ">=2,<3"
 
 [[package]]
 name = "langchain-openai"
-version = "0.3.23"
+version = "0.3.24"
 description = "An integration package connecting OpenAI and LangChain"
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "langchain_openai-0.3.23-py3-none-any.whl", hash = "sha256:624794394482c0923823f0aac44979968d77fdcfa810e42d4b0abd8096199a40"},
-    {file = "langchain_openai-0.3.23.tar.gz", hash = "sha256:73411c06e04bc145db7146a6fcf33dd0f1a85130499dcae988829a4441ddaa66"},
+    {file = "langchain_openai-0.3.24-py3-none-any.whl", hash = "sha256:3db7bb2964f86636276a8f4bbed4514daf13865b80896e547ff7ea13ce98e593"},
+    {file = "langchain_openai-0.3.24.tar.gz", hash = "sha256:cec1ab4ce7a8680af1eb11427b4384d2ceb46e9b20ff3f7beb0b0d83cab61a97"},
 ]
 
 [package.dependencies]
 langchain-core = ">=0.3.65,<1.0.0"
-openai = ">=1.68.2,<2.0.0"
+openai = ">=1.86.0,<2.0.0"
 tiktoken = ">=0.7,<1"
 
 [[package]]
@@ -1750,11 +1750,34 @@ pinecone = {version = ">=6.0.0,<8.0.0", extras = ["asyncio"]}
 
 [[package]]
 name = "langchain-tests"
+version = "0.3.19"
+description = "Standard tests for LangChain implementations"
+optional = false
+python-versions = "<4.0,>=3.9"
+groups = ["main"]
+markers = "platform_python_implementation == \"PyPy\""
+files = [
+    {file = "langchain_tests-0.3.19-py3-none-any.whl", hash = "sha256:f235b74421e9bf71e9453405287204a4e11f20ed3829f9b7eee9ef55df47a50a"},
+    {file = "langchain_tests-0.3.19.tar.gz", hash = "sha256:0d835148fdea7a5bcb3e26c7128b110bb4fa9532b070993566d107632a26b3a0"},
+]
+
+[package.dependencies]
+httpx = ">=0.25.0,<1"
+langchain-core = ">=0.3.53,<1.0.0"
+numpy = {version = ">=2.1.0", markers = "python_version >= \"3.13\""}
+pytest = ">=7,<9"
+pytest-asyncio = ">=0.20,<1"
+pytest-socket = ">=0.6.0,<1"
+syrupy = ">=4,<5"
+
+[[package]]
+name = "langchain-tests"
 version = "0.3.20"
 description = "Standard tests for LangChain implementations"
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
+markers = "platform_python_implementation != \"PyPy\""
 files = [
     {file = "langchain_tests-0.3.20-py3-none-any.whl", hash = "sha256:6cc7ae64eb8dea65360a968840abe8d947c5382b95e065431c9dd061ee1dacd8"},
     {file = "langchain_tests-0.3.20.tar.gz", hash = "sha256:b94c05e37d191d4768a1a5064f2ca4053bacd48ff41e10af245ffa6a065ead4d"},
@@ -2292,14 +2315,14 @@ files = [
 
 [[package]]
 name = "openai"
-version = "1.88.0"
+version = "1.89.0"
 description = "The official Python library for the openai API"
 optional = false
 python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "openai-1.88.0-py3-none-any.whl", hash = "sha256:7edd7826b3b83f5846562a6f310f040c79576278bf8e3687b30ba05bb5dff978"},
-    {file = "openai-1.88.0.tar.gz", hash = "sha256:122d35e42998255cf1fc84560f6ee49a844e65c054cd05d3e42fda506b832bb1"},
+    {file = "openai-1.89.0-py3-none-any.whl", hash = "sha256:3fe395b3859c45336022026bbedf8e40a35e77c4ee5878ba5eaa6c8e2ff851f6"},
+    {file = "openai-1.89.0.tar.gz", hash = "sha256:c9ae3e85a4dad280176a63f4afd54dc78deadd323bf2d275edc6b2eca6858971"},
 ]
 
 [package.dependencies]
@@ -2313,6 +2336,7 @@ tqdm = ">4"
 typing-extensions = ">=4.11,<5"
 
 [package.extras]
+aiohttp = ["aiohttp", "httpx-aiohttp (>=0.1.6)"]
 datalib = ["numpy (>=1)", "pandas (>=1.2.3)", "pandas-stubs (>=1.1.0.11)"]
 realtime = ["websockets (>=13,<16)"]
 voice-helpers = ["numpy (>=2.0.2)", "sounddevice (>=0.5.1)"]
@@ -2476,14 +2500,14 @@ files = [
 
 [[package]]
 name = "pinecone"
-version = "7.1.0"
+version = "7.2.0"
 description = "Pinecone client and SDK"
 optional = false
 python-versions = "<4.0,>=3.9"
 groups = ["main"]
 files = [
-    {file = "pinecone-7.1.0-py3-none-any.whl", hash = "sha256:a8c32c16043384d0259ecdfcaefdaf2610ea4648962f23f0d7a2326399338608"},
-    {file = "pinecone-7.1.0.tar.gz", hash = "sha256:f8448f361806515b6e0e9c4e67ec0b14ce7efdbd98429925f836ee5f6cd83de4"},
+    {file = "pinecone-7.2.0-py3-none-any.whl", hash = "sha256:f91fac1137a6259ee528526af0e4e7ff3f1e71c6927df3fd3c4c4df288801b4e"},
+    {file = "pinecone-7.2.0.tar.gz", hash = "sha256:003d78cd8ab55c08578e7d827e4324689192e4deb58b192457c49e779968d52d"},
 ]
 
 [package.dependencies]
@@ -2713,6 +2737,7 @@ description = "Get CPU info with pure Python"
 optional = false
 python-versions = "*"
 groups = ["main"]
+markers = "platform_python_implementation != \"PyPy\""
 files = [
     {file = "py-cpuinfo-9.0.0.tar.gz", hash = "sha256:3cdbbf3fac90dc6f118bfd64384f309edeadd902d7c8fb17f02ffa1fc3f49690"},
     {file = "py_cpuinfo-9.0.0-py3-none-any.whl", hash = "sha256:859625bc251f64e21f077d099d4162689c762b5d6a4c3c97553d56241c9674d5"},
@@ -2968,14 +2993,14 @@ diagrams = ["jinja2", "railroad-diagrams"]
 
 [[package]]
 name = "pytest"
-version = "8.4.0"
+version = "8.4.1"
 description = "pytest: simple powerful testing with Python"
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "pytest-8.4.0-py3-none-any.whl", hash = "sha256:f40f825768ad76c0977cbacdf1fd37c6f7a468e460ea6a0636078f8972d4517e"},
-    {file = "pytest-8.4.0.tar.gz", hash = "sha256:14d920b48472ea0dbf68e45b96cd1ffda4705f33307dcc86c676c1b5104838a6"},
+    {file = "pytest-8.4.1-py3-none-any.whl", hash = "sha256:539c70ba6fcead8e78eebbf1115e8b589e7565830d7d006a8723f19ac8a0afb7"},
+    {file = "pytest-8.4.1.tar.gz", hash = "sha256:7c67fd69174877359ed9371ec3af8a3d2b04741818c51e5e99cc1742251fa93c"},
 ]
 
 [package.dependencies]
@@ -3014,6 +3039,7 @@ description = "A ``pytest`` fixture for benchmarking code. It will group the tes
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
+markers = "platform_python_implementation != \"PyPy\""
 files = [
     {file = "pytest-benchmark-5.1.0.tar.gz", hash = "sha256:9ea661cdc292e8231f7cd4c10b0319e56a2118e2c09d9f50e1b3d150d2aca105"},
     {file = "pytest_benchmark-5.1.0-py3-none-any.whl", hash = "sha256:922de2dfa3033c227c96da942d1878191afa135a29485fb942e85dff1c592c89"},
@@ -3035,6 +3061,7 @@ description = "Pytest plugin to create CodSpeed benchmarks"
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
+markers = "platform_python_implementation != \"PyPy\""
 files = [
     {file = "pytest_codspeed-3.2.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:c5165774424c7ab8db7e7acdb539763a0e5657996effefdf0664d7fd95158d34"},
     {file = "pytest_codspeed-3.2.0-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:9bd55f92d772592c04a55209950c50880413ae46876e66bd349ef157075ca26c"},
@@ -3067,6 +3094,7 @@ description = "A pytest plugin powered by VCR.py to record and replay HTTP traff
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
+markers = "platform_python_implementation != \"PyPy\""
 files = [
     {file = "pytest_recording-0.13.4-py3-none-any.whl", hash = "sha256:ad49a434b51b1c4f78e85b1e6b74fdcc2a0a581ca16e52c798c6ace971f7f439"},
     {file = "pytest_recording-0.13.4.tar.gz", hash = "sha256:568d64b2a85992eec4ae0a419c855d5fd96782c5fb016784d86f18053792768c"},
@@ -3675,28 +3703,11 @@ typing-extensions = ">=3.7.4.3"
 
 [[package]]
 name = "types-requests"
-version = "2.31.0.6"
-description = "Typing stubs for requests"
-optional = false
-python-versions = ">=3.7"
-groups = ["main"]
-markers = "platform_python_implementation == \"PyPy\""
-files = [
-    {file = "types-requests-2.31.0.6.tar.gz", hash = "sha256:cd74ce3b53c461f1228a9b783929ac73a666658f223e28ed29753771477b3bd0"},
-    {file = "types_requests-2.31.0.6-py3-none-any.whl", hash = "sha256:a2db9cb228a81da8348b49ad6db3f5519452dd20a9c1e1a868c83c5fe88fd1a9"},
-]
-
-[package.dependencies]
-types-urllib3 = "*"
-
-[[package]]
-name = "types-requests"
 version = "2.32.4.20250611"
 description = "Typing stubs for requests"
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
-markers = "platform_python_implementation != \"PyPy\""
 files = [
     {file = "types_requests-2.32.4.20250611-py3-none-any.whl", hash = "sha256:ad2fe5d3b0cb3c2c902c8815a70e7fb2302c4b8c1f77bdcd738192cdb3878072"},
     {file = "types_requests-2.32.4.20250611.tar.gz", hash = "sha256:741c8777ed6425830bf51e54d6abe245f79b4dcb9019f1622b773463946bf826"},
@@ -3704,19 +3715,6 @@ files = [
 
 [package.dependencies]
 urllib3 = ">=2"
-
-[[package]]
-name = "types-urllib3"
-version = "1.26.25.14"
-description = "Typing stubs for urllib3"
-optional = false
-python-versions = "*"
-groups = ["main"]
-markers = "platform_python_implementation == \"PyPy\""
-files = [
-    {file = "types-urllib3-1.26.25.14.tar.gz", hash = "sha256:229b7f577c951b8c1b92c1bc2b2fdb0b49847bd2af6d1cc2a2e3dd340f3bda8f"},
-    {file = "types_urllib3-1.26.25.14-py3-none-any.whl", hash = "sha256:9683bbb7fb72e32bfe9d2be6e04875fbe1b3eeec3cbb4ea231435aa7fd6b4f0e"},
-]
 
 [[package]]
 name = "typing-extensions"
@@ -3775,33 +3773,14 @@ files = [
 
 [[package]]
 name = "urllib3"
-version = "1.26.20"
-description = "HTTP library with thread-safe connection pooling, file post, and more."
-optional = false
-python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,>=2.7"
-groups = ["main"]
-markers = "platform_python_implementation == \"PyPy\""
-files = [
-    {file = "urllib3-1.26.20-py2.py3-none-any.whl", hash = "sha256:0ed14ccfbf1c30a9072c7ca157e4319b70d65f623e91e7b32fadb2853431016e"},
-    {file = "urllib3-1.26.20.tar.gz", hash = "sha256:40c2dc0c681e47eb8f90e7e27bf6ff7df2e677421fd46756da1161c39ca70d32"},
-]
-
-[package.extras]
-brotli = ["brotli (==1.0.9) ; os_name != \"nt\" and python_version < \"3\" and platform_python_implementation == \"CPython\"", "brotli (>=1.0.9) ; python_version >= \"3\" and platform_python_implementation == \"CPython\"", "brotlicffi (>=0.8.0) ; (os_name != \"nt\" or python_version >= \"3\") and platform_python_implementation != \"CPython\"", "brotlipy (>=0.6.0) ; os_name == \"nt\" and python_version < \"3\""]
-secure = ["certifi", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "ipaddress ; python_version == \"2.7\"", "pyOpenSSL (>=0.14)", "urllib3-secure-extra"]
-socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
-
-[[package]]
-name = "urllib3"
-version = "2.4.0"
+version = "2.5.0"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
-markers = "platform_python_implementation != \"PyPy\""
 files = [
-    {file = "urllib3-2.4.0-py3-none-any.whl", hash = "sha256:4e16665048960a0900c702d4a66415956a584919c03361cac9f1df5c5dd7e813"},
-    {file = "urllib3-2.4.0.tar.gz", hash = "sha256:414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"},
+    {file = "urllib3-2.5.0-py3-none-any.whl", hash = "sha256:e6b01673c0fa6a13e374b50871808eb3bf7046c4b125b216f6bf1cc604cff0dc"},
+    {file = "urllib3-2.5.0.tar.gz", hash = "sha256:3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"},
 ]
 
 [package.extras]
@@ -3896,6 +3875,7 @@ description = "Automatically mock your HTTP interactions to simplify and speed u
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
+markers = "platform_python_implementation != \"PyPy\""
 files = [
     {file = "vcrpy-7.0.0-py2.py3-none-any.whl", hash = "sha256:55791e26c18daa363435054d8b35bd41a4ac441b6676167635d1b37a71dbe124"},
     {file = "vcrpy-7.0.0.tar.gz", hash = "sha256:176391ad0425edde1680c5b20738ea3dc7fb942520a48d2993448050986b3a50"},
@@ -3903,10 +3883,7 @@ files = [
 
 [package.dependencies]
 PyYAML = "*"
-urllib3 = [
-    {version = "<2", markers = "platform_python_implementation == \"PyPy\""},
-    {version = "*", markers = "platform_python_implementation != \"PyPy\" and python_version >= \"3.10\""},
-]
+urllib3 = {version = "*", markers = "platform_python_implementation != \"PyPy\" and python_version >= \"3.10\""}
 wrapt = "*"
 yarl = "*"
 
@@ -4118,6 +4095,7 @@ description = "Module for decorators, wrappers and monkey patching."
 optional = false
 python-versions = ">=3.8"
 groups = ["main"]
+markers = "platform_python_implementation != \"PyPy\""
 files = [
     {file = "wrapt-1.17.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:3d57c572081fed831ad2d26fd430d565b76aa277ed1d30ff4d40670b1c0dd984"},
     {file = "wrapt-1.17.2-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:b5e251054542ae57ac7f3fba5d10bfff615b6c2fb09abeb37d2f1463f841ae22"},
