@@ -15,6 +15,6 @@ steps:
   #          '--region', 'us-central1', '--platform', 'managed', 
   #          '--allow-unauthenticated']
 
-# Store images in Google Artifact Registry 
-images:
-  -asia-east1-docker.pkg.dev/${PROJECT_ID}/superbench/superbench
+# # Store images in Google Artifact Registry 
+# images:
+#   asia-east1-docker.pkg.dev/${PROJECT_ID}/superbench/superbench

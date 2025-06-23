@@ -30,7 +30,7 @@ app = FastAPI(
 # This must be added before any routes are defined.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Add your frontend origin here
+    allow_origins=["https://superbench-thomas.web.app"],  # Add your frontend origin here
     allow_credentials=True,
     allow_methods=["*"],  # Allows all methods
     allow_headers=["*"],  # Allows all headers
