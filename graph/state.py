@@ -7,6 +7,7 @@ class GraphState(TypedDict):
 
     Attributes:
         question: question
+        chat_history: list of chat messages
         generation: LLM generation
         documents: list of documents
         can_answer_question: whether document can confidently answer question

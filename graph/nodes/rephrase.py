@@ -11,5 +11,4 @@ def rephrase(state: GraphState) -> Dict[str, Any]:
     standalone_question = rephrasing_chain.invoke(
         {"input": question, "chat_history": chat_history}
     )
-    print(f"Rephrased question: {standalone_question}")
     return {"question": standalone_question}

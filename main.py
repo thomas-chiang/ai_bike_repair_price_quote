@@ -123,12 +123,11 @@ async def create_chat(
     # Fetch the document from Firestore
     doc = chat_ref.get()
 
+    # Initialize chat history from existing messages, if any
     chat_history = []
     if doc.exists:
-        # If the document exists, return the 'messages' array.
         chat_data = doc.to_dict()
         pre_messages = chat_data.get("messages", [])
-        # Firestore returns dictionaries; we sort them by timestamp to ensure order.
         pre_messages.sort(key=lambda x: x['timestamp'])
         for pre_message in pre_messages:
             role = "ai" if pre_message['role'] == 'machine' else "user"
@@ -149,7 +148,7 @@ async def create_chat(
     # 2. Create the machine's Price Quoter response
     machine_response = ChatMessage(
         role="machine",
-        content=result.get("generation"),  # Price Quotering the user's content
+        content=result.get("generation"),
         timestamp=datetime.now(timezone.utc)
     )
 

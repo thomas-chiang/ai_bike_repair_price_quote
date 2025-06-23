@@ -16,7 +16,7 @@ def grade_documents(state: GraphState) -> Dict[str, Any]:
         state (dict): Filtered out irrelevant documents and updated can_answer_question state
     """
 
-    print("---CHECK DOCUMENT RELEVANCE TO QUESTION---")
+    print("---GRADE DOCUMENTS'S RELEVANCE TO THE QUESTION---")
     question = state["question"]
     documents = state["documents"]
 

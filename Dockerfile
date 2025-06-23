@@ -3,16 +3,16 @@ FROM python:3.13.5-slim
 
 WORKDIR /app
 
-# 將專案複製到容器中
+# Copy the FastAPI application code into the container
 COPY . /app
 
-# 安裝必要的套件
+# install necessary system dependencies
 RUN pip install --upgrade pip
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-# 開放指定的埠號，讓容器外的系統能夠訪問應用程式
+# expose specific port for external access
 EXPOSE 8080
 
-# 啟動 FastAPI 應用程式
+# start fastapi application using uvicorn
 CMD uvicorn main:app --host=0.0.0.0 --port=$PORT
