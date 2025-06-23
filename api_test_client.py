@@ -9,7 +9,7 @@ def _import_app_and_dep():
 app, get_current_user_uid = _import_app_and_dep()
 
 # Override the dependency to always return the test UID
-TEST_UID = "y6CX6WBguEaG23w9urzz5yznhdW2"
+TEST_UID = "y6CX6WBguEaG23w9urzz5yznhdW2" # your test user ID
 def override_get_current_user_uid():
     return TEST_UID
 
