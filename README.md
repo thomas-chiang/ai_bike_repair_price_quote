@@ -13,6 +13,7 @@ Request a quote for a specific service
 ![Alt text](./graph.png)
 
 ## Tech Stack
+- Frontend: see https://github.com/thomas-chiang/ai_bike_repair_price_quote_frontend
 - Backend: Python, Langgraph, Fastapi
 - Database: Firestore, Pinecone
 - Cloud: firebase, gemini
